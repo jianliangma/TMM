@@ -10,14 +10,7 @@ TMM-F and TMM-N share the same Mixer–MDN architecture and are trained independ
 
 ## 1. Set up the environment
 
-Run all commands from the repository root, where `train.py` is located. If you already have a `ktm` environment with the project dependencies installed, activate it and check whether PyTorch can use CUDA:
-
-```sh
-conda activate ktm
-python -c "import torch; print(torch.__version__, 'CUDA:', torch.cuda.is_available())"
-```
-
-Otherwise, use Conda to create a Python 3.10 environment:
+From the repository root, create and activate a Python 3.10 environment with Conda:
 
 ```sh
 conda create -n tmm python=3.10 pip -y
