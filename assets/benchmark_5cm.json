@@ -1,0 +1,89 @@
+{
+  "configuration": {
+    "data": "data/trajectories.npz",
+    "variant": "both",
+    "output_dir": "runs/github_benchmark",
+    "seed": 42,
+    "epochs": 50,
+    "batch_size": 32,
+    "learning_rate": 0.0001,
+    "references": 100,
+    "samples": 300,
+    "val_samples": 100,
+    "val_cases": 50,
+    "max_trajectories": null,
+    "device": "cuda",
+    "threads": 8
+  },
+  "device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "split_sizes": {
+    "train": 7000,
+    "val": 1000,
+    "test": 2000
+  },
+  "forecast_steps": 25,
+  "unit": "m",
+  "variants": {
+    "TMM-F": {
+      "references": 100,
+      "best_epoch": 50,
+      "elapsed_seconds": 161.45
+    },
+    "TMM-N": {
+      "references": 100,
+      "best_epoch": 14,
+      "elapsed_seconds": 166.54
+    }
+  },
+  "test": {
+    "TMM-F top-1": {
+      "ADE": 3.4082350974443174,
+      "ED": 7.580330344418865,
+      "DF": 7.644345265601649
+    },
+    "TMM-F weighted": {
+      "ADE": 4.083334370518097,
+      "ED": 8.963848341796218,
+      "DF": 9.0331070905238
+    },
+    "TMM-F oracle": {
+      "ADE": 2.3354554844485746,
+      "ED": 4.851496024564936,
+      "DF": 4.965677455000213
+    },
+    "TMM-N top-1": {
+      "ADE": 3.296494937109433,
+      "ED": 7.19899888790384,
+      "DF": 7.40799523886829
+    },
+    "TMM-N weighted": {
+      "ADE": 3.410952311585787,
+      "ED": 7.7173369917755315,
+      "DF": 7.914400321714567
+    },
+    "TMM-N oracle": {
+      "ADE": 2.3965767267605758,
+      "ED": 4.688829636195964,
+      "DF": 4.885798448918253
+    },
+    "CV": {
+      "ADE": 3.5793352350128558,
+      "ED": 8.991127109624419,
+      "DF": 8.991232219631705
+    },
+    "CA": {
+      "ADE": 22.92551419468209,
+      "ED": 63.59674686476897,
+      "DF": 63.59674686476897
+    }
+  },
+  "elapsed_seconds": 328.29,
+  "dataset": {
+    "seed": 42,
+    "observations_per_trajectory": 50,
+    "observation_noise_std_m_per_axis": 0.05,
+    "future_noise_std_m": 0.0,
+    "sample_interval_s": 0.2,
+    "sha256": "17e58335bb150a3b3da4484178ba98f8f7e634007e08ede31fddd3d03eb81016"
+  }
+}
